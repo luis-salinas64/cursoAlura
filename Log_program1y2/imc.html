@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<meta charset="UTF-8">
+
+<script>
+
+
+function saltarLinea() {
+    document.write("<br>");
+    document.write("<br>");
+    document.write("<br>");    
+    document.write("<hr>");
+    document.write("<br>");    
+    document.write("<br>");    
+}
+
+
+function imprimir(frase) {
+    document.write("<big>"+frase+"</big>");
+    saltarLinea();
+}
+
+function calcularImc(peso, altura) {
+
+    return (peso/(altura * altura));
+}
+
+
+var nombre = prompt("Ingrese su nombre");
+var peso = prompt(nombre + ",Ingrese su peso");
+var altura =prompt(nombre + ",Ingrese su altura");
+
+imcCalculado = calcularImc(peso, altura);
+
+imprimir(nombre + " tu IMC es de : " + imcCalculado);
+
+if (imcCalculado <= 18.5) {
+    imprimir("Peso bajo");
+}
+if (imcCalculado >18.5 && imcCalculado < 24.9) {
+    imprimir("Peso normal");
+}
+if (imcCalculado >= 25 && imcCalculado < 29.9) {
+
+    imprimir("Peso sobrepeso");
+
+}
+if (imcCalculado > 29.9) {
+    imprimir("Obesidad grado I");
+}
+
+</script>
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<meta charset="UTF-8">
+<h1>Programa Tablas de Multiplicar</h1>
+
+<script>
+
+
+function saltarLinea() {
+    document.write("<br>");
+    document.write("<br>");
+    document.write("<br>");        
+}
+
+function imprimir(frase) {
+    document.write("<big>"+frase+"</big>");
+    saltarLinea();
+}
+
+imprimir("while")
+multiplicador = 1
+
+while(multiplicador <= 10) {
+
+    imprimir(5 * multiplicador);
+    
+    multiplicador++;
+}
+
+imprimir("for")
+
+for (multiplicador = 1; multiplicador <= 10; multiplicador++) {
+ 
+    imprimir(5 * multiplicador);
+
+}
+
+</script>
+

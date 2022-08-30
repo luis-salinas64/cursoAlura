@@ -1,0 +1,57 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    function dibujarRectangulo(x, y, base, altura, color) {
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
+
+        pincel.fillStyle=color;
+        pincel.fillRect(x,y, base, altura);
+        pincel.strokeStyle="black";
+        pincel.strokeRect(x,y, base, altura);
+    }
+
+    function escribirTexto(x , y, texto) {
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
+
+        pincel.font="15px Georgia";
+        pincel.fillStyle="black";
+        pincel.fillText(texto, x, y);    
+        
+    }
+
+
+
+    function dibujarBarra(x,y,serie,colores,texto) {
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
+        escribirTexto(x,y,texto);
+
+        for(var i=0; i<=serie.length; i++) {
+
+            var base = 60;
+            var color = colores[i];
+            altura = serie[i];
+            dibujarRectangulo(x,y,base,altura,color);
+         
+        }
+        
+            
+            
+        }
+    
+    
+
+    var serie2009 = [6, 47, 41, 3, 3];//azul,verde,amarillo,rojo,gris
+    var serie2019 = [81, 9, 3, 3, 4];//azul,verde,amarillo,rojo,gris
+    var colores = ["orange","green","yellow","red","gray"];
+    
+
+    
+    dibujarBarra(40, 55, serie2009, colores, "2009");
+    dibujarBarra(150, 55, serie2019, colores, "2019");
+    //Aquí viene el texto faltante
+
+</script>

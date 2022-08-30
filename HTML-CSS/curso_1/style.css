@@ -1,0 +1,54 @@
+.titulo-principal{
+    padding-left: 30px;
+}
+
+#banner{
+    width: 100%;
+}
+
+.principal{
+    background-color: #cccccc;
+    padding: 20px;
+}
+
+.subtitulo {
+    text-align: center;
+}
+
+p{
+    text-align: center;
+    
+}
+
+em strong{
+    color: #fd2121;
+}
+
+#mision{
+    font-size: 20px;
+}
+h2{
+    text-align: center;
+}
+
+.diferenciales{
+    background-color: #FFFFFF;
+    padding: 30px;
+}
+
+ul{
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+    margin-right: 20%;
+    
+
+}
+
+.item {
+    font-style: italic;
+}
+
+.barbero{
+    width: 50%;
+}

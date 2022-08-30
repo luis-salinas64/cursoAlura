@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<meta charset="UTF-8">
+<h1>Adivinación</h1>
+
+<script>
+
+
+function saltarLinea() {
+    document.write("<br>");
+    document.write("<br>");
+    document.write("<br>");        
+}
+
+function imprimir(frase) {
+    document.write("<big>"+frase+"</big>");
+    saltarLinea();
+}
+
+
+var numeroPensado = Math.round(Math.random()*10);
+var contador = 1;
+var intentos = 3;
+
+while(contador <= intentos){
+    var numeroIntroducido = parseInt(prompt("Introduce un numero de 0 a 10"));
+
+if (numeroIntroducido == numeroPensado) {
+    alert("Has acertado!! El numero oculto era "+numeroPensado);
+    break;
+}
+
+if(numeroIntroducido > numeroPensado){
+    alert("Has errado!! El numero ingresado ("+numeroIntroducido+") es mayor que el numero oculto:"+numeroPensado);
+}
+    
+if(numeroIntroducido < numeroPensado){
+        alert("Has errado!!El numero ingresado es menor que el numero oculto:  " + numeroPensado);
+    }
+
+contador++;
+    
+}
+imprimir("fin del juego");
+</script>
+
